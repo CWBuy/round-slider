@@ -359,7 +359,7 @@ class RoundSlider extends LitElement {
           L ${pos.x+0.001} ${pos.y+0.001}
           "
           vector-effect="non-scaling-stroke"
-          stroke-width="${2*this.handleSize*this._scale}"
+          stroke-width="${4*this.handleSize*this._scale}"
           tabindex="0"
           @focus=${this.dragStart}
           @blur=${this.dragEnd}
@@ -396,6 +396,7 @@ class RoundSlider extends LitElement {
           <path
             class="bar"
             vector-effect="non-scaling-stroke"
+            stroke-width="14"
             d=${this._renderArc(
               this._value2angle(this.low != null ? this.low : this.min),
               this._value2angle(this.high != null ? this.high : this.value)
