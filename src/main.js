@@ -348,8 +348,8 @@ class RoundSlider extends LitElement {
           L ${pos.x+0.001} ${pos.y+0.001}
           "
           vector-effect="non-scaling-stroke"
-          stroke="rgba(0,0,0,0)"
-          stroke-width="${4*this.handleSize*this._scale}"
+          stroke: rgba(0,0,0,.25);
+          stroke-width="${4*this.handleSize*this._scale + 6}"
           />
         <path
           id=${id}
@@ -390,6 +390,7 @@ class RoundSlider extends LitElement {
         <g class="slider">
           <path
             class="path"
+            stroke-width="3"
             d=${this._renderArc(this._start, this._end)}
             vector-effect="non-scaling-stroke"
           />
