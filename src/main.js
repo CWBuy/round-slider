@@ -342,13 +342,12 @@ class RoundSlider extends LitElement {
       <g class="${id} handle">
         <path
           id=${id}
-          class="overflow"
+          class="overflow shadow-handle"
           d="
           M ${pos.x} ${pos.y}
           L ${pos.x+0.001} ${pos.y+0.001}
           "
           vector-effect="non-scaling-stroke"
-          stroke: rgba(0,0,0,.25);
           stroke-width="${4*this.handleSize*this._scale + 6}"
           />
         <path
@@ -451,6 +450,9 @@ class RoundSlider extends LitElement {
       }
       .bar {
         stroke: var(--round-slider-bar-color, deepskyblue);
+      }
+      .shadow-handle {
+        stroke: rgba(0,0,0,.25);
       }
       svg[disabled] .bar {
         stroke: var(--round-slider-disabled-bar-color, darkgray);
