@@ -174,7 +174,7 @@ class RoundSlider extends LitElement {
 
   _cleanupRotation() {
     const handle = this._rotation.handle;
-    handle.setAttribute('stroke-width', 2*this.handleSize*this._scale);
+    handle.setAttribute('stroke-width', 4*this.handleSize*this._scale);
 
     this._rotation = false;
     this.dragging = false;
